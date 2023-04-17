@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  /* Colors */
+
+  /* Primary */
+  --soft-blue: hsla(215, 51%, 70%, 0.8);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --soft-blue-line: hsla(215, 52%, 70%, 0.123);
+  --cyan-hidden: hsla(178, 100%, 50%, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.container {
+  background-color: var(--very-dark-blue-main-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 18rem;
+  height: 30.5rem;
+  background-color: var(--very-dark-blue-card-bg);
+  border-radius: 1rem;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.cardImg {
+  position: relative;
+  cursor: pointer;
+}
+
+.cardImg img {
+  width: 100%;
+  height: auto;
+  border-radius: .5rem;
+}
+
+.hiddenContent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+  background-color: var(--cyan-hidden);
+  border-radius: .5rem;
+}
+
+.hiddenContent img {
+  width: 15%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.cardImg:hover .hiddenContent {
+  opacity: 1;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.cardContent h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.cardContent h1:hover {
+  color: var(--cyan);
+  transition: .5s;
+}
+
+.cardContent h2 {
+  font-size: .9rem;
+  font-weight: 400;
+  color: var(--soft-blue);
+  margin-bottom: 1rem;
+}
+
+.value {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.leftValue {
+  display: flex;
+  gap: .5rem;
+}
+
+.rightValue {
+  display: flex;
+  gap: .4rem;
+}
+
+.ethereum {
+  color: var(--cyan);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.daysLeft {
+  color: var(--soft-blue);
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+hr {
+  border-color: var(--soft-blue-line);
+  margin-bottom: .9rem;
+}
+
+.creator {
+  display: flex;
+  justify-content: left;
+  gap: .8rem;
+}
+
+.creator img {
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.creator p {
+  font-size: .85rem;
+  font-weight: 400;
+  color: var(--soft-blue);
+  padding-top: .3rem;
+}
+
+.creatorName {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.creatorName:hover {
+  color: var(--cyan);
+  transition: .5s;
+}
+
+footer {
+  background-color: var(--very-dark-blue-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+}
+
+.attribution {
+  color: var(--soft-blue);
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.attribution a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+@media (max-width: 400px) {
+  .attribution {
+    text-align: center;
+    font-size: .8rem;
+  }
+}
